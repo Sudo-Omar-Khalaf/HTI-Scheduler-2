@@ -45,8 +45,8 @@ class ScheduleGeneratorService {
     try {
       console.log('🏗️ Generating personalized weekly schedule...');
       
-      // Parse user course selection
-      const courseSelection = this.parseUserCourseSelection(userRequest);
+      // Parse user course selection with smart group selection
+      const courseSelection = this.parseUserCourseSelection(userRequest, courseGroups);
       console.log('📚 User course selection:', courseSelection);
       
       // Validate course span requirements
@@ -783,7 +783,7 @@ class ScheduleGeneratorService {
     const conflicts = [];
     
     for (const day of this.days) {
-      for (let slot = 0; slot < this.timeSlots.length; slot++) {
+      for (let slot = 0; slot < this.timeSlots; slot++) {
         const cell = weeklyTable.schedule[day][slot];
         if (cell && !cell.is_continuation) {
           // Check for overlaps with other courses in this slot

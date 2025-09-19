@@ -36,8 +36,13 @@ async function demonstrateWeeklyTable() {
         let hasContent = false;
         for (let slot = 0; slot < 8; slot++) {
           const cell = result.schedule.weekly_table.schedule[days[day]][slot];
-          if (cell) {
-            console.log(`  ${timeSlots[slot]}: ${cell}`);
+          if (cell && !cell.is_continuation) {
+            console.log(`  ${timeSlots[slot]}: ${cell.row1_course_info.display_text}`);
+            console.log(`                      ${cell.row2_arabic_name}`);
+            console.log(`                      ${cell.row3_hall_professor}`);
+            hasContent = true;
+          } else if (cell && cell.is_continuation) {
+            console.log(`  ${timeSlots[slot]}: [continuation]`);
             hasContent = true;
           }
         }
