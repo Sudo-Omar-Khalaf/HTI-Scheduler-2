@@ -1,99 +1,195 @@
-# HTI Scheduler
+# HTI Personalized Weekly Schedule Generator
 
-A full-stack web application for parsing, validating, and generating university course schedules from Arabic Excel timetables.
+A comprehensive full-stack application for generating personalized weekly schedules for students based on course selection, with exact Excel positioning and Arabic language support.
 
-## Features
+## 🤖 GitHub Copilot Integration
 
-- **Arabic Excel Parsing**: Extract course schedules from Arabic university timetables
-- **Smart Data Validation**: Automatically detect and resolve scheduling conflicts
-- **Schedule Optimization**: Generate multiple optimized schedule candidates
-- **Export Functionality**: Export schedules to Excel and CSV formats with RTL support
-- **Modern UI**: Responsive React interface with Arabic text support
+This project is optimized for GitHub Copilot with **remote indexing** enabled for enhanced code suggestions and context awareness.
 
-## Technology Stack
+### Copilot Features Enabled:
+- **Remote Indexing**: Better understanding of project structure and patterns
+- **Codebase Context**: Includes entire project context in suggestions  
+- **Experimental Features**: Temporal context, intent detection, and project templates
+- **Smart Completions**: Context-aware auto-completions and code actions
+
+## ✨ Key Features
+
+- 📊 **Parse Arabic Excel Timetables**: Extract course groups and sessions from Arabic university schedules
+- 🗓️ **Generate Weekly Schedules**: Create 7-day × 8-slot personalized weekly tables
+- 📝 **Multiple Input Formats**: Support "EEC 101", "EEC 10105", shared groups ("05,06")
+- 🏛️ **3-Row Course Blocks**: Course code+group, Arabic name, hall+professor format
+- ✅ **True Span Validation**: Validate course spans (EEC 101: 3, EEC 113: 3, EEC 121: 5, etc.)
+- 🔍 **Smart Group Selection**: Automatic group selection with conflict detection
+- 📤 **Excel/CSV Export**: Export with merged cells and Arabic text support
+- 🌐 **Modern UI**: Responsive React interface with Tailwind CSS
+
+## 🏗️ Technology Stack
 
 ### Backend
 - **Node.js** with Express.js
-- **XLSX** for Excel file processing
+- **ExcelJS** for Arabic Excel processing
 - **Multer** for file uploads
-- **Helmet** for security
 - **CORS** for cross-origin requests
 
 ### Frontend
 - **React** with Vite
-- **Tailwind CSS** for styling
-- **Framer Motion** for animations
-- **React Hot Toast** for notifications
-- **Lucide React** for icons
+- **Tailwind CSS** for modern styling
+- **Responsive Design** with Arabic text support
 
-## Quick Start
+### Development Tools
+- **GitHub Copilot** with remote indexing
+- **VS Code** with enhanced configuration
+- **Custom CLI utilities** for testing
+
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 16+ 
 - npm or yarn
+- GitHub Copilot extension (recommended)
 
 ### Installation
 
 1. **Clone and install dependencies:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Sudo-Omar-Khalaf/HTI-Scheduler-2.git
    cd HTI-scheduler-2
-   npm run install:all
+   npm install
    ```
 
 2. **Start development servers:**
    ```bash
+   # Using the launch script (recommended)
+   ./launch.sh
+   
+   # Or manually start both servers
    npm run dev
    ```
 
-3. **Access the application:**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:5000
+3. **Open in VS Code for Copilot integration:**
+   ```bash
+   code .
+   ```
 
-### Production Build
+### Getting Started with Copilot:
+1. Ensure GitHub Copilot extension is installed in VS Code
+2. Open this workspace - Copilot will automatically index the project remotely
+3. Enjoy enhanced code suggestions with full project context
 
+## 🧪 Testing & Demo
+
+### CLI Testing Utilities
 ```bash
-# Build frontend for production
-npm run build
+# Test schedule generation with formatted output
+node table-demo.js
 
-# Start production server
-npm start
+# Test weekly table display
+node show-table-test.js
+
+# Test core functionality
+node test-schedule-generator.js
+
+# Check available course groups
+node check-groups.js
 ```
 
-## Usage
-
-1. **Upload Excel File**: Drag and drop your Arabic Excel timetable
-2. **Review Results**: View parsed courses, groups, and validation results
-3. **Generate Schedules**: Create optimized schedule candidates with preferences
-4. **Export**: Download schedules in Excel or CSV format
-
-## API Endpoints
-
-- `POST /api/excel/parse` - Parse Excel timetable
-- `POST /api/schedule/generate` - Generate optimized schedules
-- `POST /api/export/excel` - Export schedule to Excel
-- `POST /api/export/csv` - Export schedule to CSV
-
-## File Structure
-
-```
-HTI-scheduler-2/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/     # Reusable UI components
-│   │   ├── pages/          # Application pages
-│   │   └── services/       # API services
-├── server/                 # Node.js backend
-│   ├── models/             # Data models
-│   ├── routes/             # API routes
-│   ├── services/           # Business logic
-│   └── uploads/            # File upload directory
-└── package.json            # Root package configuration
+### API Testing
+```bash
+# Test API endpoints
+curl -X POST http://localhost:5000/api/schedule/generate \
+  -H "Content-Type: application/json" \
+  -d @test-api-request.json
 ```
 
-## Development
+## 📋 API Endpoints
+
+- `POST /api/excel/upload` - Upload Excel timetable file
+- `POST /api/schedule/generate` - Generate personalized weekly schedule
+- `GET /api/export/excel/:scheduleId` - Export schedule to Excel
+- `GET /api/export/csv/:scheduleId` - Export schedule to CSV
+
+## 🏛️ Project Structure
+
+```
+├── server/                           # Node.js backend
+│   ├── services/                    # Core business logic
+│   │   ├── ScheduleGeneratorService.js  # Main schedule generation
+│   │   ├── ExcelParserServiceFinal.js   # Arabic Excel parsing
+│   │   ├── ExportService.js             # Excel/CSV export
+│   │   └── NormalizationService.js      # Data normalization
+│   ├── routes/                      # API endpoints
+│   │   ├── excel.js                 # File upload routes
+│   │   ├── schedule.js              # Schedule generation
+│   │   └── export.js                # Export functionality
+│   └── models/                      # Data models
+├── client/                          # React frontend
+│   └── src/
+│       ├── components/              # Reusable UI components
+│       │   ├── Layout.jsx
+│       │   └── PersonalizedScheduleGenerator.jsx
+│       ├── pages/                   # Application pages
+│       │   ├── HomePage.jsx
+│       │   ├── UploadPage.jsx
+│       │   ├── SchedulePage.jsx
+│       │   └── ExportPage.jsx
+│       └── services/
+│           └── api.js               # API client
+├── .vscode/                         # VS Code & Copilot configuration
+├── .github/                         # GitHub-specific configs
+└── test-*.js                       # Testing utilities
+```
+
+## 🔧 Development Features
 
 ### Available Scripts
+```bash
+# Development
+npm run dev              # Start both client and server in development mode
+./launch.sh             # Quick launch script for development
+
+# Testing
+npm run test            # Run test suite
+node table-demo.js      # Demo weekly table generation
+node test-schedule-generator.js  # Test core functionality
+
+# Production
+npm run build           # Build for production
+npm start              # Start production server
+```
+
+### GitHub Copilot Integration
+- **Remote Indexing**: Enhanced context understanding across the entire codebase
+- **Smart Suggestions**: Context-aware completions for React, Node.js, and business logic
+- **Project Templates**: Pre-configured templates for common patterns
+- **Real-time Assistance**: Intelligent code generation and debugging support
+
+## 📚 Documentation
+
+- [Copilot Configuration](.copilot-config.md) - Detailed Copilot setup and features
+- [Test Workflow](test-workflow.md) - Testing procedures and examples
+- [API Documentation](.github/README.md) - Comprehensive API reference
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **GitHub Copilot** for enhanced development experience with remote indexing
+- **HTI University** for providing the Arabic Excel timetable specifications
+- **Open Source Community** for the excellent libraries and tools used
+
+---
+
+*Powered by GitHub Copilot with remote indexing for intelligent code assistance* 🤖
 
 - `npm run dev` - Start both frontend and backend in development mode
 - `npm run build` - Build frontend for production

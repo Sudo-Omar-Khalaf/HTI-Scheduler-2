@@ -1,0 +1,52 @@
+name: Copilot Context
+description: Enhanced GitHub Copilot context for better code suggestions
+
+# This file helps GitHub Copilot understand the project structure and purpose
+# for better code suggestions and completions
+
+project_type: full-stack-web-application
+languages:
+  - javascript
+  - jsx
+  - json
+  - markdown
+
+frameworks:
+  - react
+  - nodejs
+  - express
+  - vite
+
+libraries:
+  - exceljs
+  - tailwindcss
+  - cors
+  - multer
+
+architecture:
+  - client-server
+  - restful-api
+  - microservices
+
+key_features:
+  - excel-parsing
+  - schedule-generation
+  - arabic-language-support
+  - export-functionality
+  - conflict-detection
+  - smart-group-selection
+
+file_patterns:
+  services: "server/services/*.js"
+  components: "client/src/components/*.jsx"
+  pages: "client/src/pages/*.jsx"
+  routes: "server/routes/*.js"
+  tests: "test-*.js"
+  demos: "*-demo.js"
+
+conventions:
+  - camelCase for variables and functions
+  - PascalCase for React components
+  - kebab-case for file names
+  - Descriptive naming for services and utilities
+  - Arabic text support throughout the application
