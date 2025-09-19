@@ -1,0 +1,138 @@
+
+> hti-scheduler-server@1.0.0 start
+> node index.js
+
+🚀 HTI Scheduler server running on port 5000
+📚 Environment: development
+::1 - - [18/Sep/2025:22:43:35 +0000] "POST /api/schedule/generate-personalized HTTP/1.1" 400 50 "-" "curl/8.13.0"
+::1 - - [18/Sep/2025:22:50:26 +0000] "GET /health HTTP/1.1" 404 39 "-" "curl/8.13.0"
+📊 Parsing Excel file: Ø§ÙØ¬Ø¯Ø§ÙÙ Ø§ÙØ¯Ø±Ø§Ø³ÙØ© _ Ø§ÙÙØµÙ Ø§ÙØ¯Ø±Ø§Ø³Ù Ø§ÙØ£ÙÙ _ ÙØ³Ù Ø§ÙÙÙØ¯Ø³Ø© Ø§ÙÙÙØ±Ø¨ÙØ© (1).xlsx
+📖 Reading Excel file with final parser...
+🔍 Detecting schedule blocks...
+📅 Day: السبت → Saturday (Row 7)
+🎯 Block at (10,2): EEC 113 Groups: [01,02] Span: 4
+📅 Day: الأحد → Sunday (Row 16)
+🎯 Block at (19,2): EEC 11201 Groups: [01] Span: 4
+🎯 Block at (19,7): EEC 113 Groups: [02] Span: 2
+🎯 Block at (22,2): EEC 101 Groups: [05,06] Span: 4
+🎯 Block at (22,6): EEC 101 Groups: [08] Span: 3
+🎯 Block at (25,2): EEC 112 Groups: [01,02] Span: 4
+🎯 Block at (25,7): EEC 102 Groups: [06] Span: 2
+🎯 Block at (28,2): EEC 112 Groups: [03,04] Span: 4
+🎯 Block at (28,7): EEC 11206 Groups: [06] Span: 2
+📅 Day: الثلاثاء → Tuesday (Row 31)
+🎯 Block at (34,6): EEC 112 Groups: [05,06] Span: 3
+📅 Day: الأربعاء → Wednesday (Row 37)
+🎯 Block at (40,2): EEC 102 Groups: [04] Span: 4
+🎯 Block at (43,2): EEC 11203 Groups: [03] Span: 4
+📅 Day: السبت → Saturday (Row 62)
+📅 Day: الأحد → Sunday (Row 65)
+🎯 Block at (68,8): EEC 12303 Groups: [03] Span: 1
+🎯 Block at (71,3): EEC 121 Groups: [01,02] Span: 4
+🎯 Block at (74,2): EEC 12104 Groups: [04] Span: 4
+📅 Day: الثلاثاء → Tuesday (Row 77)
+📅 Day: الأربعاء → Wednesday (Row 80)
+🎯 Block at (83,3): EEC 12304 Groups: [04] Span: 4
+🎯 Block at (83,7): EEC 124 Groups: [02] Span: 2
+📅 Day: السبت → Saturday (Row 101)
+🎯 Block at (104,3): EEC 14206 Groups: [06] Span: 4
+🎯 Block at (107,3): EEC 142 Groups: [01,02] Span: 4
+🎯 Block at (107,8): EEC 14207 Groups: [07] Span: 1
+📅 Day: الأحد → Sunday (Row 110)
+🎯 Block at (113,6): EEC 14201 Groups: [01] Span: 3
+🎯 Block at (116,6): EEC 14208 Groups: [08] Span: 3
+🎯 Block at (119,2): EEC 11501 Groups: [01] Span: 4
+🎯 Block at (119,8): EEC 141 Groups: [04] Span: 1
+📅 Day: الثلاثاء → Tuesday (Row 125)
+🎯 Block at (128,3): EEC 142 Groups: [07,08] Span: 4
+🎯 Block at (128,8): EEC 14202 Groups: [02] Span: 1
+🎯 Block at (131,3): EEC 14210 Groups: [10] Span: 4
+📅 Day: الأربعاء → Wednesday (Row 134)
+🎯 Block at (137,3): EEC 142 Groups: [09,10] Span: 4
+🎯 Block at (137,8): EEC 14205 Groups: [05] Span: 1
+📅 Day: السبت → Saturday (Row 155)
+📅 Day: الأحد → Sunday (Row 158)
+🎯 Block at (161,5): EEC 12502 Groups: [02] Span: 4
+🎯 Block at (164,5): EEC 125 Groups: [01,02] Span: 4
+🎯 Block at (167,5): EEC 154 Groups: [01] Span: 4
+📅 Day: الثلاثاء → Tuesday (Row 170)
+🎯 Block at (173,8): EEC 15202 Groups: [02] Span: 1
+📅 Day: الأربعاء → Wednesday (Row 176)
+📅 Day: السبت → Saturday (Row 194)
+🎯 Block at (197,3): EEC 212 Groups: [01,02] Span: 4
+🎯 Block at (200,2): EEC21103 Groups: [03] Span: 4
+📅 Day: الأحد → Sunday (Row 203)
+🎯 Block at (206,8): EEC 212 Groups: [05,06] Span: 1
+🎯 Block at (209,8): EEC 21301 Groups: [01] Span: 1
+🎯 Block at (212,2): EEC 211 Groups: [01,02] Span: 4
+🎯 Block at (212,7): EEC 21201 Groups: [01] Span: 2
+🎯 Block at (215,2): EEC 21203 Groups: [03] Span: 4
+🎯 Block at (215,6): EEC 21303 Groups: [03] Span: 3
+🎯 Block at (218,4): EEC 21205 Groups: [05] Span: 4
+📅 Day: الثلاثاء → Tuesday (Row 221)
+🎯 Block at (224,2): EEC 21204 Groups: [04] Span: 4
+📅 Day: الأربعاء → Wednesday (Row 227)
+🎯 Block at (230,6): EEC 21302 Groups: [02] Span: 3
+🎯 Block at (233,7): EEC 255 Groups: [02] Span: 2
+📅 Day: السبت → Saturday (Row 251)
+🎯 Block at (254,6): EEC 22501 Groups: [01] Span: 3
+📅 Day: الأحد → Sunday (Row 257)
+🎯 Block at (260,4): EEC 222 Groups: [01,02] Span: 4
+🎯 Block at (263,3): EEC 22401 Groups: [01] Span: 4
+🎯 Block at (266,2): EEC 223 Groups: [01,02] Span: 4
+🎯 Block at (266,6): EEC 22201 Groups: [01] Span: 3
+🎯 Block at (269,2): EEC 223 Groups: [03,04] Span: 4
+🎯 Block at (269,8): EEC 22403 Groups: [03] Span: 1
+📅 Day: الثلاثاء → Tuesday (Row 272)
+🎯 Block at (275,3): EEC 22404 Groups: [04] Span: 4
+🎯 Block at (275,8): EEC 22501 Groups: [01] Span: 1
+📅 Day: الأربعاء → Wednesday (Row 278)
+🎯 Block at (281,5): EEC 22202 Groups: [02] Span: 4
+🎯 Block at (284,7): EEC 22302 Groups: [02] Span: 2
+📅 Day: السبت → Saturday (Row 302)
+📅 Day: الأحد → Sunday (Row 305)
+🎯 Block at (308,6): EEC 24203 Groups: [03] Span: 3
+🎯 Block at (311,2): EEC 242 Groups: [01,02] Span: 4
+🎯 Block at (311,8): EEC 21402 Groups: [02] Span: 1
+🎯 Block at (314,5): EEC 241 Groups: [01,02] Span: 4
+🎯 Block at (317,5): EEC 241 Groups: [03,04] Span: 4
+📅 Day: الثلاثاء → Tuesday (Row 320)
+🎯 Block at (323,4): EEC 24101 Groups: [01] Span: 4
+🎯 Block at (326,4): EEC 24103 Groups: [03] Span: 4
+🎯 Block at (329,3): EEC 24204 Groups: [04] Span: 4
+📅 Day: الأربعاء → Wednesday (Row 332)
+🎯 Block at (335,2): EEC 242 Groups: [03,04] Span: 4
+🎯 Block at (338,4): EEC 24104 Groups: [04] Span: 4
+📅 Day: السبت → Saturday (Row 356)
+🎯 Block at (359,8): EEC 27101 Groups: [01] Span: 1
+📅 Day: الأحد → Sunday (Row 362)
+🎯 Block at (365,2): EEC 27301 Groups: [01] Span: 4
+🎯 Block at (365,6): EEC 27302 Groups: [02] Span: 3
+🎯 Block at (368,2): EEC 28401 Groups: [01] Span: 4
+🎯 Block at (371,2): EEC 273 Groups: [01,02] Span: 4
+🎯 Block at (371,8): EEC 28801 Groups: [01] Span: 1
+📅 Day: الثلاثاء → Tuesday (Row 374)
+🎯 Block at (377,3): EEC 27401 Groups: [01] Span: 4
+🎯 Block at (377,8): EEC 28002 Groups: [02] Span: 1
+🎯 Block at (380,2): EEC 28802 Groups: [02] Span: 4
+📅 Day: الأربعاء → Wednesday (Row 383)
+🎯 Block at (386,6): EEC 284 Groups: [01,02] Span: 3
+🎯 Block at (389,6): EEC 288 Groups: [01,02] Span: 3
+📊 Found 100 schedule entries
+⚠️ Courses with inconsistent spans:
+   EEC 113: spans 4, 2
+   EEC 101: spans 4, 3
+   EEC 112: spans 4, 3
+   EEC 102: spans 2, 4
+   EEC 212: spans 4, 1
+   EEC 22501: spans 3, 1
+✅ Successfully parsed 98 course groups
+::1 - - [18/Sep/2025:22:53:33 +0000] "POST /api/excel/parse HTTP/1.1" 200 - "http://localhost:5173/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+🎯 Generating schedules for 0 courses
+📚 Available course groups: 98
+🏗️ Generating personalized weekly schedule...
+📚 User course selection: []
+Schedule generation error: TypeError: Cannot read properties of undefined (reading 'length')
+    at /home/khalaf/Downloads/HTI-scheduler-2/server/routes/schedule.js:48:50
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+::1 - - [18/Sep/2025:22:54:23 +0000] "POST /api/schedule/generate HTTP/1.1" 500 119 "http://localhost:5173/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"

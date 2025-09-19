@@ -1,0 +1,27 @@
+{
+  "name": "hti-scheduler",
+  "version": "1.0.0",
+  "description": "Full-stack web application for parsing, validating, and generating university course schedules from Arabic Excel timetables",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "test": "cd server && npm test && cd ../client && npm test"
+  },
+  "keywords": [
+    "university",
+    "scheduler",
+    "arabic",
+    "excel",
+    "timetable"
+  ],
+  "author": "HTI Scheduler Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
