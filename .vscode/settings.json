@@ -1,31 +1,58 @@
 {
+    // Enable next-generation edit suggestions
     "github.copilot.nextEditSuggestions.enabled": true,
+    
+    // Enable Copilot for all file types
     "github.copilot.enable": {
         "*": true,
         "yaml": true,
         "plaintext": true,
-        "markdown": true
+        "markdown": true,
+        "javascript": true,
+        "typescript": true,
+        "jsx": true,
+        "tsx": true,
+        "json": true
     },
+    
+    // Advanced Copilot configuration
     "github.copilot.advanced": {
         "debug.overrideEngine": "copilot-codex",
         "debug.testOverrideProxyUrl": "",
         "debug.showScores": false,
         "debug.overrideProxyUrl": "",
         "listCount": 10,
-        "inlineSuggestCount": 3
+        "inlineSuggestCount": 5,
+        "length": 500
     },
+    
+    // Chat and interaction settings
     "github.copilot.chat.localeOverride": "en",
     "github.copilot.chat.welcomeMessage": "default",
-    "github.copilot.editor.enableAutoCompletions": true,
-    "github.copilot.editor.enableCodeActions": true,
-    "github.copilot.renameSuggestions.triggerAutomatically": true,
     "github.copilot.chat.scopeSelection": true,
     "github.copilot.chat.useProjectTemplates": true,
+    
+    // Editor integration
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.editor.iterativeEditing": true,
+    "github.copilot.renameSuggestions.triggerAutomatically": true,
+    
+    // REMOTE INDEXING CONFIGURATION (Key Settings)
     "github.copilot.preferences.includeCodebaseContext": true,
     "github.copilot.preferences.projectContext": "enabled",
     "github.copilot.preferences.codebaseIndexing": "enabled",
     "github.copilot.preferences.remoteIndexing": true,
+    "github.copilot.preferences.indexingMode": "remote",
+    
+    // Experimental features for enhanced context
     "github.copilot.chat.experimental.codebaseContext": true,
     "github.copilot.chat.experimental.temporalContext": true,
-    "github.copilot.chat.experimental.intentDetection": true
+    "github.copilot.chat.experimental.intentDetection": true,
+    "github.copilot.chat.experimental.codeLens": true,
+    
+    // Additional remote indexing optimizations
+    "github.copilot.contextualActions": true,
+    "github.copilot.suggestOnlyOnCompletion": false,
+    "github.copilot.telemetry": true
 }
