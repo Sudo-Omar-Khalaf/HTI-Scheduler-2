@@ -38,8 +38,8 @@ async function showWeeklyTable() {
           if (cell && !cell.is_continuation) {
             console.log(`  ${timeSlots[slot]}:`);
             console.log(`    Course: ${cell.row1_course_info.display_text}`);
-            console.log(`    Arabic: ${cell.row2_arabic_name}`);
-            console.log(`    Hall:   ${cell.row3_hall_professor}`);
+            console.log(`    Arabic: ${cell.row2_course_name.display_text}`);
+            console.log(`    Hall:   ${cell.row3_details.display_text}`);
             hasContent = true;
           } else if (cell && cell.is_continuation) {
             console.log(`  ${timeSlots[slot]}: [continuation]`);
